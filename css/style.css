@@ -115,3 +115,12 @@
     background-color: #e5e5e5;
     transform: translateY(-2px);
 }
+
+/* 统一产品图片显示大小（不改内容、不改结构） */
+.product-item img {
+    width: 220px;        /* 你可以改成 200 / 240 */
+    height: 220px;
+    object-fit: cover;  /* 关键：等比裁剪填满 */
+    display: block;
+    margin: 0 auto;
+}
