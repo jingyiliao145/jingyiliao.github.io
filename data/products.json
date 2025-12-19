@@ -14,7 +14,7 @@
   {
     "name": "Diamond Earrings 3",
     "price": "$900",
-    "onSale": false,
+    "onSale": true,
     "image": "images/product3.jpg"
   }
 ]
