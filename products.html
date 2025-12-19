@@ -2,45 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Company - Products</title>
+    <title>Products - My Company</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>My Company</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>My Company</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <main>
-        <h2>Our Products</h2>
-        <div id="product-grid" class="product-grid"></div>
-    </main>
+<main>
+    <h2>Our Products</h2>
+    <div id="product-grid" class="product-grid"></div>
+</main>
 
-    <footer>
-        <p>&copy; 2025 My Company</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 My Company</p>
+</footer>
 
-    <script>
-    fetch('data/products.json')
-        .then(response => response.json())
-        .then(products => {
-            const grid = document.getElementById('product-grid');
-            products.forEach(p => {
-                const saleTag = p.onSale ? '<span class="sale-tag">Sale</span>' : '';
-                grid.innerHTML += `
-                    <div class="product-item">
-                        ${saleTag}
-                        <img src="${p.image}" alt="${p.name}">
-                        <h3>${p.name}</h3>
-                        <p>Price: ${p.price}</p>
-                    </div>
-                `;
-            });
+<script>
+fetch('data/products.json')
+    .then(res => res.json())
+    .then(products => {
+        const grid = document.getElementById('product-grid');
+
+        products.forEach(p => {
+            const statusLabel = p.available
+                ? '<span class="status in-stock">In Stock</span>'
+                : '<span class="status sold-out">Not Available</span>';
+
+            grid.innerHTML += `
+                <div class="product-item">
+                    <img src="${p.image}" alt="${p.name}">
+                    <h3>${p.name}</h3>
+                    <p class="price">${p.price}</p>
+                    ${statusLabel}
+                </div>
+            `;
         });
-    </script>
+    });
+</script>
 </body>
 </html>

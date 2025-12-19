@@ -1,31 +1,77 @@
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    gap: 0.8rem;
-    margin-top: 1rem;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
 }
 
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 0.7rem;
+header {
     background-color: #222;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 1rem;
 }
 
-form button:hover {
-    background-color: #444;
+nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* 产品卡片 */
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 260px;
+    text-align: center;
+}
+
+/* ✅ 所有图片统一大小，不管原图 */
+.product-item img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;     /* 保持比例，自动裁剪 */
+    border-radius: 4px;
+}
+
+/* 价格 */
+.price {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* 销售状态 */
+.status {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+}
+
+.in-stock {
+    background-color: #e6f6ec;
+    color: #1b7a3e;
+}
+
+.sold-out {
+    background-color: #fbeaea;
+    color: #a30000;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
