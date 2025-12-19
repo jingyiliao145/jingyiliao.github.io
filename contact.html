@@ -1,17 +1,120 @@
-<form action="https://formspree.io/f/xvzpzpnz" method="POST">
-    <input type="hidden" name="_next" value="https://jingyiliao145.github.io/thank-you.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - My Company</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Modal 样式 */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0; top: 0; 
+            width: 100%; height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        form input, form textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 0.7rem;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover { background-color: #444; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Company</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <label>Name:</label>
-    <input type="text" name="name" required>
+    <main>
+        <h2>Contact Us</h2>
 
-    <label>Email:</label>
-    <input type="email" name="_replyto" required>
+        <!-- 保留原有固定公司信息 -->
+        <p><strong>Address:</strong> 123 Diamond Street, Stockholm, Sweden</p>
+        <p><strong>Email:</strong> <a href="mailto:info@mycompany.com">info@mycompany.com</a></p>
+        <p><strong>Phone:</strong> +46 70 123 4567</p>
+        <p><strong>Contact Person:</strong> John Doe</p>
 
-    <label>Meeting Time:</label>
-    <input type="datetime-local" name="time" required>
+        <hr>
 
-    <label>Notes:</label>
-    <textarea name="notes"></textarea>
+        <!-- 预约会议按钮 -->
+        <button id="openBooking" style="padding:10px 20px; margin-top:20px;">Book a Meeting</button>
 
-    <button type="submit">Submit</button>
-</form>
+        <!-- 弹出表单 Modal -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Book a Meeting</h2>
+                <form action="https://formspree.io/f/xvzpzpnz" method="POST">
+                    <input type="hidden" name="_next" value="https://jingyiliao145.github.io/thank-you.html">
+                    
+                    <label>Name:</label>
+                    <input type="text" name="name" required>
+
+                    <label>Email:</label>
+                    <input type="email" name="_replyto" required>
+
+                    <label>Meeting Time:</label>
+                    <input type="datetime-local" name="time" required>
+
+                    <label>Notes:</label>
+                    <textarea name="notes"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Company</p>
+    </footer>
+
+    <script>
+        // Modal 弹出逻辑
+        const modal = document.getElementById("bookingModal");
+        const btn = document.getElementById("openBooking");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = () => modal.style.display = "block";
+        span.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => { if(event.target == modal) modal.style.display = "none"; }
+    </script>
+</body>
+</html>
