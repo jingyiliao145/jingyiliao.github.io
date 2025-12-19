@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
     <h1>My Company</h1>
     <nav>
@@ -32,8 +33,8 @@ fetch('data/products.json')
 
         products.forEach(p => {
             const statusLabel = p.available
-                ? '<span class="status in-stock">In Stock</span>'
-                : '<span class="status sold-out">Not Available</span>';
+                ? '<span class="status sale">Sale</span>'
+                : '<span class="status not-sale">Not for Sale</span>';
 
             grid.innerHTML += `
                 <div class="product-item">
@@ -46,5 +47,6 @@ fetch('data/products.json')
         });
     });
 </script>
+
 </body>
 </html>

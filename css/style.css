@@ -124,3 +124,21 @@
     display: block;
     margin: 0 auto;
 }
+
+/* 产品状态文字样式 */
+.status {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Sale：红色 */
+.status.sale {
+    color: #c40000;
+}
+
+/* Not for Sale：灰色 */
+.status.not-sale {
+    color: #888888;
+}
