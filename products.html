@@ -32,13 +32,17 @@ fetch('data/products.json')
         const grid = document.getElementById('product-grid');
 
         products.forEach(p => {
-            const statusLabel = p.available
+            const isSale = p.available === true;
+
+            const statusLabel = isSale
                 ? '<span class="status sale">Sale</span>'
                 : '<span class="status not-sale">Not for Sale</span>';
 
+            const imgClass = isSale ? 'product-img sale-img' : 'product-img';
+
             grid.innerHTML += `
                 <div class="product-item">
-                    <img src="${p.image}" alt="${p.name}">
+                    <img src="${p.image}" alt="${p.name}" class="${imgClass}">
                     <h3>${p.name}</h3>
                     <p class="price">${p.price}</p>
                     ${statusLabel}
