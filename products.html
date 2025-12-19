@@ -38,14 +38,18 @@ fetch('data/products.json')
                 ? '<span class="status sale">Sale</span>'
                 : '<span class="status not-sale">Not for Sale</span>';
 
-            const imgClass = isSale ? 'product-img sale-img' : 'product-img';
+            const imgClass = isSale
+                ? 'product-img sale-img'
+                : 'product-img';
 
             grid.innerHTML += `
                 <div class="product-item">
                     <img src="${p.image}" alt="${p.name}" class="${imgClass}">
-                    <h3>${p.name}</h3>
-                    <p class="price">${p.price}</p>
-                    ${statusLabel}
+                    <div class="product-info">
+                        <h3>${p.name}</h3>
+                        <p class="price">${p.price}</p>
+                        ${statusLabel}
+                    </div>
                 </div>
             `;
         });

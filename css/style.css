@@ -15,7 +15,7 @@ header h1 {
 }
 
 nav {
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 nav a {
@@ -30,17 +30,17 @@ nav a:hover {
 }
 
 main {
-    padding: 40px 24px;
+    padding: 32px 24px;
 }
 
 footer {
     text-align: center;
-    padding: 24px;
+    padding: 20px;
     border-top: 1px solid #eee;
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
-/* ===== 首页背景（图片版） ===== */
+/* ===== 首页背景（保持不动） ===== */
 .hero-image {
     height: 90vh;
     background-image: url("../images/index-back.jpg");
@@ -50,7 +50,6 @@ footer {
     position: relative;
 }
 
-/* 半透明遮罩 */
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -60,7 +59,6 @@ footer {
     justify-content: center;
 }
 
-/* 首页内容 */
 .hero-content {
     text-align: center;
     color: #ffffff;
@@ -82,7 +80,6 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* 首页按钮 */
 .hero-button {
     display: inline-block;
     padding: 12px 30px;
@@ -99,59 +96,56 @@ footer {
     transform: translateY(-2px);
 }
 
-/* ===== 产品列表 ===== */
+/* ===== 产品列表（重点紧凑化） ===== */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 32px;
-    margin-top: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px; /* 原来更大，这里收紧 */
+    margin-top: 24px;
 }
 
 .product-item {
     text-align: center;
 }
 
-/* 统一产品图片大小 */
+/* 产品图片 */
 .product-img {
     width: 220px;
     height: 220px;
     object-fit: cover;
     display: block;
-    margin: 0 auto 12px;
+    margin: 0 auto 8px; /* 图片与文字更近 */
 }
 
-/* Sale 产品图片红色边框 */
+/* Sale 红框 */
 .sale-img {
     border: 2px solid #c40000;
-    box-shadow: 0 0 8px rgba(196, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(196, 0, 0, 0.5);
 }
 
-/* 产品名称 */
-.product-item h3 {
-    font-size: 16px;
-    margin: 8px 0;
-}
-
-/* 价格 */
-.price {
-    margin: 4px 0;
+/* 产品文字区域 */
+.product-info h3 {
     font-size: 15px;
+    margin: 4px 0;
 }
 
-/* ===== 产品状态 ===== */
-.status {
-    display: inline-block;
-    margin-top: 6px;
-    font-weight: bold;
+.price {
+    margin: 2px 0;
     font-size: 14px;
 }
 
-/* Sale：红色 */
+/* 状态 */
+.status {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
 .status.sale {
     color: #c40000;
 }
 
-/* Not for Sale：灰色 */
 .status.not-sale {
     color: #888888;
 }
