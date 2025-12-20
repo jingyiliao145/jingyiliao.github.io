@@ -43,7 +43,7 @@ footer {
 /* ===== 首页背景（保持不动） ===== */
 .hero-image {
     height: 90vh;
-    background-image: url("../images/index-back.jpg");
+    background-image: url("../images/index-back2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,4 +148,21 @@ footer {
 
 .status.not-sale {
     color: #888888;
+}
+
+
+/* 非首页页面通用背景 */
+.page-background {
+    background-image: url("../images/index-back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh; /* 至少占满视窗高度 */
+}
+
+.page-background .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* 半透明覆盖层，可调整 */
 }
