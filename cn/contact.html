@@ -54,47 +54,48 @@
 </head>
 <body>
     <script src="/css/nav.js"></script>
+    <div class="page-background">
+        <div class="hero-overlay"></div>
+        <main>
+            <h2>Contact Us</h2>
 
-    <main>
-        <h2>Contact Us</h2>
+            <!-- 保留原有固定公司信息 -->
+            <p><strong>Address:</strong> 123 Diamond Street, Stockholm, Sweden</p>
+            <p><strong>Email:</strong> <a href="mailto:info@mycompany.com">info@mycompany.com</a></p>
+            <p><strong>Phone:</strong> +46 70 123 4567</p>
+            <p><strong>Contact Person:</strong> Dennis Liu</p>
 
-        <!-- 保留原有固定公司信息 -->
-        <p><strong>Address:</strong> 123 Diamond Street, Stockholm, Sweden</p>
-        <p><strong>Email:</strong> <a href="mailto:info@mycompany.com">info@mycompany.com</a></p>
-        <p><strong>Phone:</strong> +46 70 123 4567</p>
-        <p><strong>Contact Person:</strong> Dennis Liu</p>
+            <hr>
 
-        <hr>
+            <!-- 预约会议按钮 -->
+            <button id="openBooking" style="padding:10px 20px; margin-top:20px;">Book a Meeting</button>
 
-        <!-- 预约会议按钮 -->
-        <button id="openBooking" style="padding:10px 20px; margin-top:20px;">Book a Meeting</button>
+            <!-- 弹出表单 Modal -->
+            <div id="bookingModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Book a Meeting</h2>
+                    <form action="https://formspree.io/f/xvzpzpnz" method="POST">
+                        <input type="hidden" name="_next" value="https://jingyiliao145.github.io/thank-you.html">
+                        
+                        <label>Name:</label>
+                        <input type="text" name="name" required>
 
-        <!-- 弹出表单 Modal -->
-        <div id="bookingModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Book a Meeting</h2>
-                <form action="https://formspree.io/f/xvzpzpnz" method="POST">
-                    <input type="hidden" name="_next" value="https://jingyiliao145.github.io/thank-you.html">
-                    
-                    <label>Name:</label>
-                    <input type="text" name="name" required>
+                        <label>Email:</label>
+                        <input type="email" name="_replyto" required>
 
-                    <label>Email:</label>
-                    <input type="email" name="_replyto" required>
+                        <label>Meeting Time:</label>
+                        <input type="datetime-local" name="time" required>
 
-                    <label>Meeting Time:</label>
-                    <input type="datetime-local" name="time" required>
+                        <label>Notes:</label>
+                        <textarea name="notes"></textarea>
 
-                    <label>Notes:</label>
-                    <textarea name="notes"></textarea>
-
-                    <button type="submit">Submit</button>
-                </form>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </main>
-
+        </main>
+    </div>
     <script src="/css/footer.js"></script>
 
     <script>
