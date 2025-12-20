@@ -174,3 +174,41 @@ footer {
         height: 150px;
     }
 }
+
+/* ===== hero-content 中文优化 ===== */
+body[lang="zh"] .hero-content,
+body[lang="zh"] main {
+    font-size: 0.9rem;  /* 中文字体缩小 */
+    line-height: 1.4;   /* 调整行高 */
+    padding: 1.5rem;    /* 增加内边距，避免覆盖 logo */
+}
+
+/* 针对中文页面，主标题适当缩小 */
+body[lang="zh"] .hero-content h2 {
+    font-size: 2rem;
+}
+
+/* 针对中文页面，段落文字 */
+body[lang="zh"] .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 页面主内容区域 */
+body[lang="zh"] main {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* 响应式优化，手机端中文页面 */
+@media (max-width: 768px) {
+    body[lang="zh"] .hero-content h2 {
+        font-size: 1.6rem;
+    }
+    body[lang="zh"] .hero-content p {
+        font-size: 0.9rem;
+    }
+    body[lang="zh"] main {
+        padding: 16px;
+    }
+}
