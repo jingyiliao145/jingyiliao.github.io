@@ -32,12 +32,12 @@ nav a:hover {
 main {
     padding: 32px 24px;
     position: relative;
-    z-index: 2; /* 保证内容在 overlay 上方 */
+    z-index: 2; /* 保证内容在 overlay 上方，可点击 */
 }
 
 footer {
     position: relative;
-    z-index: 2; /* 保证 footer 在 overlay 上方 */
+    z-index: 2; /* 保证 footer 在 overlay 上方，可点击 */
     text-align: center;
     padding: 20px;
     border-top: 1px solid #eee;
@@ -49,7 +49,7 @@ footer {
     height: 90vh;
     background-image: url("../images/index-back2.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -61,8 +61,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none; /* 不阻挡点击 */
-    z-index: 1;
+    pointer-events: none; /* 不挡点击 */
+    z-index: 1; /* 放在背景上方，内容下方 */
 }
 
 .hero-content {
@@ -128,12 +128,12 @@ footer {
 /* ===== 非首页页面背景 ===== */
 .page-background {
     background-image: url("../images/index-back.jpg");
-    background-size: cover;
+    background-size: cover;            /* 保证覆盖容器 */
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100vh;                     /* 占满整个视口 */
     display: flex;
     flex-direction: column;
 }
@@ -142,7 +142,7 @@ footer {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.3);
-    pointer-events: none; /* 允许点击 */
+    pointer-events: none; /* 不挡点击 */
     z-index: 1;
 }
 
