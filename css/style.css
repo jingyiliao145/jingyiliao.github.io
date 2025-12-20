@@ -58,9 +58,6 @@ footer {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     pointer-events: none; /* 不挡点击 */
     z-index: 1; /* 放在背景上方，内容下方 */
 }
@@ -73,6 +70,26 @@ footer {
     background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     backdrop-filter: blur(4px);
+    position: relative;
+    z-index: 2; /* 确保按钮和链接可点击 */
+}
+
+/* 按钮样式 */
+.hero-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #e5e5e5;
+    transform: translateY(-2px);
 }
 
 /* ===== 产品列表 ===== */
@@ -128,12 +145,12 @@ footer {
 /* ===== 非首页页面背景 ===== */
 .page-background {
     background-image: url("../images/index-back.jpg");
-    background-size: cover;            /* 保证覆盖容器 */
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     width: 100vw;
-    height: 100vh;                     /* 占满整个视口 */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -144,6 +161,28 @@ footer {
     background: rgba(0, 0, 0, 0.3);
     pointer-events: none; /* 不挡点击 */
     z-index: 1;
+}
+
+/* ===== 中文页面字体优化 ===== */
+body[lang="zh"] .hero-content,
+body[lang="zh"] main {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 1.5rem;
+}
+
+body[lang="zh"] .hero-content h2 {
+    font-size: 2rem;
+}
+
+body[lang="zh"] .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+body[lang="zh"] main {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /* ===== 响应式优化 ===== */
@@ -173,35 +212,7 @@ footer {
         width: 150px;
         height: 150px;
     }
-}
 
-/* ===== hero-content 中文优化 ===== */
-body[lang="zh"] .hero-content,
-body[lang="zh"] main {
-    font-size: 0.9rem;  /* 中文字体缩小 */
-    line-height: 1.4;   /* 调整行高 */
-    padding: 1.5rem;    /* 增加内边距，避免覆盖 logo */
-}
-
-/* 针对中文页面，主标题适当缩小 */
-body[lang="zh"] .hero-content h2 {
-    font-size: 2rem;
-}
-
-/* 针对中文页面，段落文字 */
-body[lang="zh"] .hero-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* 页面主内容区域 */
-body[lang="zh"] main {
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-/* 响应式优化，手机端中文页面 */
-@media (max-width: 768px) {
     body[lang="zh"] .hero-content h2 {
         font-size: 1.6rem;
     }
