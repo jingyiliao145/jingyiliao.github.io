@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* 防止固定 header 遮挡锚点 */
+    .product-item[id] {
+      scroll-margin-top: 100px; /* 根据 header 高度调整 */
+    }
+  </style>
+</head>
+<body>
+
+<script src="/css/nav.js"></script>
+
+<div class="page-background">
+  <div class="hero-overlay"></div>
+
+  <main>
+    <h1>Products</h1>
+
+    <div class="product-grid">
+      <div class="product-item" id="product1">
+        <img src="/images/product1.jpg" alt="Round Cut 0.5 Ct" class="product-img">
+        <div class="product-info">
+          <h3>Round Cut 0.5 Ct Diamond</h3>
+          <p class="price">Price: €850</p>
+        </div>
+      </div>
+
+      <div class="product-item" id="product2">
+        <img src="/images/product2.jpg" alt="Princess Cut 1.0 Ct" class="product-img">
+        <div class="product-info">
+          <h3>Princess Cut 1.0 Ct Diamond</h3>
+          <p class="price">Price: €1,500</p>
+        </div>
+      </div>
+
+      <div class="product-item" id="product3">
+        <img src="/images/product3.jpg" alt="Custom Ring with Diamond" class="product-img">
+        <div class="product-info">
+          <h3>Custom Ring with Diamond</h3>
+          <p class="price">Price: €2,200+</p>
+        </div>
+      </div>
+    </div>
+
+    <p>B2B clients can contact us for bulk or series customization; B2C clients can inquire for high-end custom projects.</p>
+    <a href="contact.html">Contact Us</a>
+  </main>
+</div>
+
+<script src="/css/footer.js"></script>
+</body>
+</html>

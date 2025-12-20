@@ -13,7 +13,7 @@
     <a href="${base}about.html">${isCN ? "关于我们" : "About Us"}</a>
     <a href="${base}services.html">${isCN ? "服务" : "Services"}</a>
     <a href="${base}product.html">${isCN ? "定制示例" : "Custom Examples"}</a>
-    <a href="${base}products.html">${isCN ? "产品" : "Products"}</a>
+    <a href="/data/products.html">${isCN ? "产品" : "Products"}</a>
     <a href="${base}sourcing.html">${isCN ? "采购" : "Sourcing"}</a>
     <a href="${base}manufacturing.html">${isCN ? "生产" : "Manufacturing"}</a>
     <a href="${base}how-we-work.html">${isCN ? "合作方式" : "How We Work"}</a>
