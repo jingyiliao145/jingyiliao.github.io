@@ -10,7 +10,7 @@ Formspree 会生成一个 URL，例如：https://formspree.io/f/mnqrbxyz
 2️⃣ 设置接收邮箱
 登录你的 Formspree 账号：找到表单 mnqrbxyz 
 → 点击 Edit Form 或 Settings
-->在 Email to 或 Recipients 输入：poloravel@gmail.com
+->在 Email to 或 Recipients 输入gemail
 这是 Formspree 免费版支持单个收件邮箱.提交表单后，你就会收到邮件到这个邮箱
 
 复制 hash 到你的表单 action, 也就是contact.html中
